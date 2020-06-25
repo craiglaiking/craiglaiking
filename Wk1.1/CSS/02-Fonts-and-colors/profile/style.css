@@ -1,0 +1,39 @@
+body {
+  background-color: #F7F9FC;
+  font-family: 'Mukta', sans-serif;
+  color: 14213d;
+  font-size:15px;
+  line-height: 50px;
+}
+
+h1, h2, h3 {
+color: 05668d;
+font-family: 'Roboto' sans-serif;
+font-size: 30px;
+line-height: 15px;
+
+}
+
+h2 {
+  color:028090;
+  font-size: 20px;
+}
+
+h3{
+  color: 00a896;
+  font-size: 15px;
+}
+
+p {
+  color: 293241;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px ;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.6;
+}
