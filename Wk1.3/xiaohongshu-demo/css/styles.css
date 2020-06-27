@@ -3,7 +3,9 @@
 
 /* --- Component imports --- */
 @import url("components/container.css");
-
+@import url("components/card.css");
+@import url("components/avatar.css");
+@import url("components/masonry.css");
 
 /* --- Fonts & colors --- */
 body {
@@ -11,6 +13,63 @@ body {
   font-family: "Open Sans", "Helvetica", "sans-serif";
   margin: 0;
 }
-h1, h2, h3 {
+h1 {
   font-family: "Poppins", "sans-serif";
+}
+
+h2, h3 {
+  font-family: 'Yellowtail', cursive, "Poppins", "sans-serif";
+}
+p {
+  margin-left:10px;
+}
+
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* The Masonry Container */
+.container .masonry {
+  margin: 1.5em auto;
+  max-width: 768px;
+  column-gap: 1em;
+  column-count: 3;
+}
+
+/* The Masonry Brick */
+.container .masonry .card {
+  background: #fff;
+  padding: 1em;
+  margin: 0 0 1.5em;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .container .masonry {
+    column-count: 3;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .container .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on small screens */
+@media (max-width: 767px) {
+  .container .masonry {
+    column-count: 1;
+  }
+  .container {
+    padding: 0 10px;
+  }
 }
