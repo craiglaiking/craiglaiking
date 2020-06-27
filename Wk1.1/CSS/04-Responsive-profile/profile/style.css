@@ -1,13 +1,13 @@
 body {
   background-color: #F7F9FC;
   font-family: 'Mukta', sans-serif;
-  color: 14213d;
+  color: #14213d;
   font-size:15px;
   line-height: 50px;
 }
 
 h1, h2, h3 {
-  color: 05668d;
+  color: #05668d;
   font-family: 'Roboto' sans-serif;
   line-height: 15px;
 }
@@ -18,17 +18,17 @@ h1 {
 }
 
 h2 {
-  color:028090;
+  color: #028090;
   font-size: 20px;
 }
 
 h3{
-  color: 00a896;
+  color: #00a896;
   font-size: 15px;
 }
 
 p {
-  color: 293241;
+  color: #293241;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 15px;
   line-height: 25px;
@@ -83,13 +83,14 @@ transition: all 0.3s ease 0s;
 }
 
 .card {
-    background-color: ecf8f8;
+    background-color: #ecf8f8;
     padding: 40px;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
     border-radius: 4px;
     margin: 20px 0px;
     text-align: center;
-    width: 500px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 960px) {
