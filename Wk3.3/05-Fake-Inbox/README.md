@@ -50,7 +50,7 @@ Update the [web page document title](https://developer.mozilla.org/en-US/docs/We
 
 In the `newMessage()` function, instead of returning dummy data, we want to show data from a service on the internet. These are call **servers**. They are computers that you can connect to on the web.
 
-How does this work? Open this address in your browser: `fml.shanghaiwogeng.com/api/v1/stories`
+How does this work? Open this address in your browser: `https://raw.githubusercontent.com/johncalvinroberts/03-Wagon-Race/master/stories.json`
 
 
 
@@ -88,7 +88,7 @@ fetch(url).then((response) => {
 For our API endpoint:
 
 ```js
-fetch("https://fml.shanghaiwogeng.com/api/v1/stories")
+fetch("https://raw.githubusercontent.com/johncalvinroberts/03-Wagon-Race/master/stories.json")
   .then(response => response.json())
   .then((data) => {
     console.log(data);
@@ -99,7 +99,7 @@ Now you can return this data in `newMessage()`:
 
 ```js
 const newMessage = () => {
-  fetch("https://fml.shanghaiwogeng.com/api/v1/stories")
+  fetch("https://raw.githubusercontent.com/johncalvinroberts/03-Wagon-Race/master/stories.json")
   .then(response => response.json())
   .then((data) => {
     console.log(data);

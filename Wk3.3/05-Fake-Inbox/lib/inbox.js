@@ -6,7 +6,8 @@ const hasNewMessage = () => {
   // TODO: return true with a probability of 20%.
 };
 
-  // const newMessage = (newSender, newSubject) => {
+
+  /* Solution from first part of exercise: Using random dummy data
   const newMessage = () => {
     //Create random list of senders
     let senderList = ["Andrew", "Ben", "Craig"]
@@ -29,7 +30,28 @@ const hasNewMessage = () => {
 
   // TODO: return a random message as an object with two keys, subject and sender
 }
+*/
 
+// Pulling from API
+const newMessage = (callback) => {
+   fetch("https://raw.githubusercontent.com/johncalvinroberts/03-Wagon-Race/master/stories.json")
+       .then(response => response.json())
+       .then((data) => {
+         console.log(data);
+         // Add your code to get `name` and `text` values from data and put into the `sender` and `subject` message object.
+         callback(data)
+    //return message; // This is wrong!!
+  });
+       }
+const refresh =  () => {
+if(hasNewMessage){
+      newMessage(appendMessageToDom)  // the input parameter of appendMessageToDom should be all the data fetched from API
+  }
+};
+// };
+// const myMsgs = newMessage() // myMsgs will be undefined.
+
+// Need to re-code so pull in dat from APi database
 const appendMessageToDom = (message) => {
   // Calling in the function newMessage so I can access variables declared in the newMessaeg function
   let newObjectProperties = newMessage()
@@ -47,6 +69,7 @@ const appendMessageToDom = (message) => {
   // TODO: append the given message to the DOM (as a new row of `#inbox`)
 };
 
+/* commented out in response to loading in API
 const refresh = () => {
   // Integrate hasNewMessage function so new emails come through only if hasNewMessage is true (i.e 20% of the time)
   if (hasNewMessage() === true) {
@@ -60,7 +83,8 @@ const refresh = () => {
   let unreadEmails = document.querySelectorAll('#inbox div.unread')
   // Count the number of divs that relate to unread emails
   let emailCounter = unreadEmails.length
-
+  // debugging example
+  console.log(emailCounter)
   // use innerHTML to change the number realting to unread emails in the H1 heading
   theH1Counter.innerHTML = `(${emailCounter})`
 
@@ -71,7 +95,7 @@ const refresh = () => {
   // TODO: Implement the global refresh logic. If there is a new message,
   //       append it to the DOM. Update the unread counter in title as well.
 };
-
+*/
 
 
 

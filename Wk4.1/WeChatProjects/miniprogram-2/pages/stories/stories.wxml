@@ -1,0 +1,27 @@
+<!--pages/stories/stories.wxml-->
+<view class="banner" style="padding:20px 0px; height: 100px; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/pages/images/Front_Page.jpeg);">
+    <view class="h1">F*** my code</view>
+    <view class="p">{{tagline}}</view>
+</view>
+
+<!-- FMC STORY -->
+
+<view wx:for="{{stories}}" class="card-product">
+  <view class="card-product-infos">
+    <!-- including an if statement where if it is true then {{item.content}} is shown -->
+    <view class="h2" wx:if="{{ item.content }}">{{item.content}}</view>
+    <!-- including an else statement if there is no content -->
+    <view class="h2" wx:else>There’s nothing here yet!</view>
+    <view class="p" wx:if="{{ item.name }}">{{item.name}}</view>
+    <!-- including an else statement but no text will be provided -->
+    <view class="p" wx:else> </view>
+    
+  </view>
+  <button style = "margin: 5px" bindtap="clickMe" wx:if="{{ item.content }}">{{text1}}</button>
+  <view wx:else> </view>
+  <button style = "margin: 5px" bindtap="clickMe" wx:if="{{ item.content }}">{{text2}}</button>
+  <view wx:else> </view>
+</view>
+
+
+

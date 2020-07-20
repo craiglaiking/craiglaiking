@@ -1,0 +1,61 @@
+/**app.wxss**/
+
+.container {
+  padding: 100rpx 0;
+  width: 90%;
+  margin: 0 auto;
+} 
+
+.h1 {
+  font-size:40px;
+  font-family: Arial;
+  color: #1d3557;
+}
+
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #e5e5e5;
+}
+
+.banner .h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-weight: bold;
+  color: #1d3557;
+}
+
+.banner .p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn-flat {
+  font-size: 10px;
+  margin: 20px;
+  color: white;
+  padding: 8px 8px;
+  border-radius: 4px;
+  background: red;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: red;
+  color: white;
+  opacity: 0.5;
+}
+
+.btn-vote{
+  background: green;
+}
+
+.btn-vote:hover{
+  background: green;
+  opacity: 0.5;
+}

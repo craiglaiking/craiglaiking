@@ -1,0 +1,13 @@
+<!--pages/landing/landing.wxml-->
+
+<view class="banner" style="padding-top:20px; height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/pages/images/Front_page.jpeg);">
+  <view class="container">
+    <view class="h1">{{title}}</view>
+    <view class="p">{{description}}</view>
+    <navigator class="btn btn-flat" url="/pages/stories/stories">
+      {{cta}}
+    </navigator>
+  </view>
+</view>
+
+<!--pages/landing/landing.wxml-->
