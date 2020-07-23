@@ -1,0 +1,17 @@
+<!--pages/story/story.wxml-->
+<view class="h2" >{{story.name}}</view>
+<view class="p">{{story.content}}</view>
+<view class="comments-heading">Comments</view>
+<!-- Add an if statement outside of the "for" loop. If the "for" loop returns no comments, the line of code won't appear thus the if statement won't apply. Also thought bout it another way: We are working from the ouside in  -->
+<!-- comments.length is a useful condition to keep in mind for if statements -->
+<view wx:if="{{ comments.length > 0 }}">
+  <view wx:for="{{comments}}" wx:for-item="comment" class="comment-box"> 
+      <!-- comment.Comment has to be used because I used "Comment" in my database -->
+      <view class="p">{{comment.Comment}}</view>
+      <view class="btn-flat" data-id="{{comment.id}}" bindtap="deleteComment" > Delete </view>
+      <view class="btn-flat btn-vote" data-id="{{comment.id}}" data-votes="{{comment.votes}}" bindtap="voteComment" > votes: {{comment.votes}} </view>
+  </view>
+</view>
+<!-- wx:else statement applies only if there are no comments to show  -->
+<view style="font-style: italic" class="p" wx:else> No comments yet </view>
+
