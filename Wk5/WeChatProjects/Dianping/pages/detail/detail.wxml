@@ -1,0 +1,28 @@
+<!--pages/detail/detail.wxml-->
+<view class= "card-product" >
+  <view class="card-product-infos" >
+    <view>{{restaurant.name}}</view>
+    <view>{{restaurant.description}}</view>
+  </view>
+</view>
+<!-- <view class="comments-heading">Comments</view> -->
+
+<!-- Add an if statement outside of the "for" loop. If the "for" loop returns no comments, the line of code won't appear thus the if statement won't apply. Also thought bout it another way: We are working from the ouside in  -->
+<!-- comments.length is a useful condition to keep in mind for if statements -->
+<view wx:if="{{ reviews.length > 0 }}">
+  <view wx:for="{{reviews}}" wx:for-item="review"> 
+      <view class="p">{{review.content}}</view>
+  </view>
+</view>
+<!-- wx:else statement applies only if there are no comments to show  -->
+<view wx:else> No comments yet </view>
+
+<!-- at bottom of show.wxml -->
+<form bindsubmit="createReview" wx:if="{{currentUser.is_authorized}}">
+  <view class="section">
+    <input name="content" placeholder="put down your thoughts"/>
+  </view>
+  <button formType="submit" class="footer-btn">Submit</button>
+</form>
+
+<button type = "primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler" wx:else>Please Log In to Review</button>

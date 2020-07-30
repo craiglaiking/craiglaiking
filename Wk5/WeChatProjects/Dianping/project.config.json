@@ -32,8 +32,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wx18e33cc149fe9877",
-	"projectname": "Toutiao",
+	"appid": "wxe99b4ce2aa8328c1",
+	"projectname": "Dianping",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -73,23 +73,9 @@
 					"scene": null
 				},
 				{
-					"id": 1,
-					"name": "Story",
-					"pathName": "pages/story/story",
-					"query": "id=5f16dfb984749b48b755f63a",
-					"scene": null
-				},
-				{
 					"id": -1,
-					"name": "Comments",
-					"pathName": "pages/comments/comments",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Post",
-					"pathName": "pages/post/post",
+					"name": "User",
+					"pathName": "pages/user/user",
 					"query": "",
 					"scene": null
 				}

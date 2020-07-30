@@ -3,7 +3,7 @@ App({
   onLaunch: function () {
     require('./sdk-wechat.3.12.0');
 
-    let clientID = 'e5dfe23ae36e6ae86bd8';
+    let clientID = 'e5dfe23ae36e6ae86bd8'; 
     wx.BaaS.init(clientID);
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

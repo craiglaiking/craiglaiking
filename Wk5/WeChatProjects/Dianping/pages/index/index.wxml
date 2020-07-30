@@ -1,0 +1,14 @@
+<!--pages/index/index.wxml-->
+<view class = "banner" >
+  <view class="h1">Dianping</view>
+  <view class="p"> What ya eating?</view>
+</view>
+
+<view wx:for="{{restaurants}}" wx:for-item="restaurant" wx:key="id" class = "card-product">
+    <image class="img" src="{{restaurant.photo}}"/>
+  <!-- data-id is NB. It will record and store the restaurant id even after clicking through to the detail page where only one restaurant is shown -->
+  <view bindtap="showRestaurant" data-id="{{restaurant.id}}" class="card-product-infos">
+    <view class="h2">{{restaurant.name}}</view>
+    <view class="p">{{restaurant.description}}</view>
+  </view>
+</view>
